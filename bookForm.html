@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="stylebookingpage.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <script src="form.js" defer></script>
+    <title>Poltek Sohat Kitchen - booking</title>
+  </head>
+    <div class="container">
+      <form id="BookForm" onsubmit="return validateform()" method="post">
+        <div class="logo">
+          <img src="image/Frame.png" width="100px" /><br /><br />
+        </div>
+        <div class="title">BOOKING <br /><br /></div>
+        <div class="data">
+          <div class="kiri">
+            <label>First name* </label>
+            <input type="text" name="fname" id="fname" />
+            
+            <br />
+            <label>Email* </label>
+            <input type="text" name="email" id="email" />
+            <br />
+            <label>People* </label>
+            <select id="people" name="people">
+              <option value="1-2">1-2 persons</option>
+              <option value="3-5">3-5 persons</option>
+              <option value="6-8">6-8 persons</option>
+              <option value="9-12">9-12 persons</option>
+              <option value="12-16">12-16 persons</option>
+              <option value="17more">17++ persons</option>
+            </select>
+            <br />
+            <label>Date* </label>
+            <input type="date" id="date"/>
+            <br />
+            <div class="time-selection">
+              <div class="start-time">
+                <label>Start-Time* </label>
+                <select id="stime" name="stime">
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                </select>
+              </div>
+              <div class="end-time">
+                <label>End-Time* </label>
+                <select id="etime" name="etime">
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="17:00">17:00</option>
+                  <option value="18:00">18:00</option>
+                  <option value="19:00">19:00</option>
+                  <option value="20:00">20:00</option>
+                  <option value="21:00">21:00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="kanan">
+            <label>Last name* </label>
+            <input type="text" name="lname" id="lname" />
+            <br />
+            <label>Phone* </label>
+            <input type="text" name="phone" id="phone" />
+            <br />
+          </div>
+        </div>
+        <br /><br />
+        <div class="Book-btn">
+          <input type="submit" value="Book Now">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

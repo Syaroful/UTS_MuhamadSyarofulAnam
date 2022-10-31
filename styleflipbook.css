@@ -1,0 +1,112 @@
+/* book */
+
+.flipBook {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins";
+}
+.book {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: transform 0.5s;
+}
+
+.paper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
+}
+/* 2C1D00 000000 */
+.front,
+.back {
+  background-image: linear-gradient(to top left, #000000, #2C1D00 );
+  color: white;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
+  border-left: 3px solid #000000;
+}
+.back {
+  z-index: 0;
+}
+.front-content,
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imgMenu{
+  border: 5px solid #c69610;
+}
+.cover-content {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url("image/CoverMenu.jpg");
+  background-size: 100%;
+}
+.back-content {
+  transform: rotateY(-180deg);
+}
+/* Papper Flipped effect */
+.flipped .front,
+.flipped .back {
+  transform: rotateY(-180deg);
+}
+/* Button */
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 30px;
+  transition: transform 0.5s;
+}
+button:focus {
+  outline: none;
+}
+button:hover i {
+  color: #786105;
+  font-size: 55px;
+}
+i {
+  font-size: 50px;
+  color: #a78809;
+}
+
+/* paper satck order */
+#p1 {
+  z-index: 3;
+}
+#p2 {
+  z-index: 2;
+}
+#p3 {
+  z-index: 1;
+}
+#img1 {
+  width: 349px;
+  height: 499px;
+  rotate: 180deg;
+}
+
+/* FLIP BOOK */
